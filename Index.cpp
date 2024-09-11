@@ -83,8 +83,10 @@ cout << myNum;
 
 
 int main(){
-    string greeting = " Hello Bangladesh";
-    cout << greeting;
+    int a = 10;
+int b = 5;
+a = b;
+cout << a;  // Output: 5
 }
 
 

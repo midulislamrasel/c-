@@ -204,11 +204,6 @@ In programming, arithmetic operators are used to perform basic mathematical oper
    cout << a;  // Output: 4
    ```
 
-### Notes
-
-- **Division (`/`)** performs integer division when both operands are integers.
-- **Modulus (`%`)** works only with integers and returns the remainder of the division.
-
 # Assignment Operators
 
 Assignment operators are used to assign values to variables. Below is a table of common assignment operators and their functionality.
@@ -277,9 +272,188 @@ Assignment operators are used to assign values to variables. Below is a table of
    cout << a;  // Output: 1
    ```
 
+# Comparison Operators
+
+Comparison operators are used to compare two values. They return a boolean result (`true` or `false`) depending on whether the comparison is valid. Below is a table listing the common comparison operators and their functionality.
+
+| Operator | Description              | Example  | Result                                                       |
+| -------- | ------------------------ | -------- | ------------------------------------------------------------ |
+| `==`     | Equal to                 | `a == b` | Returns `true` if `a` is equal to `b`, otherwise `false`     |
+| `!=`     | Not equal to             | `a != b` | Returns `true` if `a` is not equal to `b`, otherwise `false` |
+| `>`      | Greater than             | `a > b`  | Returns `true` if `a` is greater than `b`                    |
+| `<`      | Less than                | `a < b`  | Returns `true` if `a` is less than `b`                       |
+| `>=`     | Greater than or equal to | `a >= b` | Returns `true` if `a` is greater than or equal to `b`        |
+| `<=`     | Less than or equal to    | `a <= b` | Returns `true` if `a` is less than or equal to `b`           |
+
+### Examples
+
+1. **Equal to (`==`)**:
+
+   ```cpp
+   int a = 10;
+   int b = 5;
+   cout << (a == b);  // Output: 0 (false)
+   ```
+
+2. **Not equal to (`!=`)**:
+
+   ```cpp
+   int a = 10;
+   int b = 5;
+   cout << (a != b);  // Output: 1 (true)
+   ```
+
+3. **Greater than (`>`)**:
+
+   ```cpp
+   int a = 10;
+   int b = 5;
+   cout << (a > b);  // Output: 1 (true)
+   ```
+
+4. **Less than (`<`)**:
+
+   ```cpp
+   int a = 10;
+   int b = 5;
+   cout << (a < b);  // Output: 0 (false)
+   ```
+
+5. **Greater than or equal to (`>=`)**:
+
+   ```cpp
+   int a = 5;
+   int b = 5;
+   cout << (a >= b);  // Output: 1 (true)
+   ```
+
+6. **Less than or equal to (`<=`)**:
+   ```cpp
+   int a = 5;
+   int b = 5;
+   cout << (a <= b);  // Output: 1 (true)
+   ```
+
+# Logical Operators
+
+Logical operators are used to perform logical operations on expressions, typically involving boolean values. They return a boolean result (`true` or `false`) based on the logic applied. Below is a table listing common logical operators and their functions.
+
+| Operator | Description            | Example  | Result                                                           |
+| -------- | ---------------------- | -------- | ---------------------------------------------------------------- | --- | --- | --- | ---------------------------------------------------------------- |
+| `&&`     | Logical AND            | `a && b` | Returns `true` if both `a` and `b` are `true`, otherwise `false` |
+| `        |                        | `        | Logical OR                                                       | `a  |     | b`  | Returns `true` if either `a` or `b` is `true`, otherwise `false` |
+| `!`      | Logical NOT (Negation) | `!a`     | Returns `true` if `a` is `false`, and `false` if `a` is `true`   |
+
+### Truth Table
+
+Here is a truth table for the logical operators:
+
+| Expression          | `a`   | `b`   | `a && b` | `a    |       | b`  | `!a` |
+| ------------------- | ----- | ----- | -------- | ----- | ----- | --- | ---- |
+| Both `true`         | true  | true  | true     | true  | false |
+| `a` true, `b` false | true  | false | false    | true  | false |
+| `a` false, `b` true | false | true  | false    | true  | true  |
+| Both `false`        | false | false | false    | false | true  |
+
+### Examples
+
+1. **Logical AND (`&&`)**:
+
+   ```cpp
+   bool a = true;
+   bool b = false;
+   cout << (a && b);  // Output: 0 (false)
+   ```
+
+2. **Logical OR (`||`)**:
+
+   ```cpp
+   bool a = true;
+   bool b = false;
+   cout << (a || b);  // Output: 1 (true)
+   ```
+
+3. **Logical NOT (`!`)**:
+   ```cpp
+   bool a = true;
+   cout << (!a);  // Output: 0 (false)
+   ```
+
+# Bitwise Operators
+
+Bitwise operators are used to perform operations at the binary level on integer values. They manipulate bits directly and are primarily used in low-level programming. Below is a table of the most common bitwise operators and their functionality.
+
+| Operator | Description                    | Example    | Result                                                                   |
+| -------- | ------------------------------ | ---------- | ------------------------------------------------------------------------ | --- | ---------------------------------------------------------- |
+| `&`      | Bitwise AND                    | `a & b`    | Performs a binary AND on `a` and `b` (1 if both bits are 1, otherwise 0) |
+| `        | `                              | Bitwise OR | `a                                                                       | b`  | Performs a binary OR on `a` and `b` (1 if either bit is 1) |
+| `^`      | Bitwise XOR (Exclusive OR)     | `a ^ b`    | Performs a binary XOR on `a` and `b` (1 if bits are different)           |
+| `~`      | Bitwise NOT (One's Complement) | `~a`       | Inverts all the bits in `a` (1 becomes 0, 0 becomes 1)                   |
+| `<<`     | Left shift                     | `a << b`   | Shifts the bits of `a` left by `b` positions (multiply by `2^b`)         |
+| `>>`     | Right shift                    | `a >> b`   | Shifts the bits of `a` right by `b` positions (divide by `2^b`)          |
+
+### Examples
+
+1. **Bitwise AND (`&`)**:
+
+   ```cpp
+   int a = 5;  // Binary: 0101
+   int b = 3;  // Binary: 0011
+   cout << (a & b);  // Output: 1 (Binary: 0001)
+   ```
+
+2. **Bitwise OR (`|`)**:
+
+   ```cpp
+   int a = 5;  // Binary: 0101
+   int b = 3;  // Binary: 0011
+   cout << (a | b);  // Output: 7 (Binary: 0111)
+   ```
+
+3. **Bitwise XOR (`^`)**:
+
+   ```cpp
+   int a = 5;  // Binary: 0101
+   int b = 3;  // Binary: 0011
+   cout << (a ^ b);  // Output: 6 (Binary: 0110)
+   ```
+
+4. **Bitwise NOT (`~`)**:
+
+   ```cpp
+   int a = 5;  // Binary: 0101
+   cout << (~a);  // Output: -6 (Binary: 1010 in 2's complement form)
+   ```
+
+5. **Left Shift (`<<`)**:
+
+   ```cpp
+   int a = 5;  // Binary: 0101
+   cout << (a << 1);  // Output: 10 (Binary: 1010, which is 5 * 2^1)
+   ```
+
+6. **Right Shift (`>>`)**:
+   ```cpp
+   int a = 5;  // Binary: 0101
+   cout << (a >> 1);  // Output: 2 (Binary: 0010, which is 5 / 2^1)
+   ```
+
+### Bitwise Truth Table (AND, OR, XOR)
+
+| `a` | `b` | `a & b` | `a  | b`  | `a ^ b` |
+| --- | --- | ------- | --- | --- | ------- |
+| 0   | 0   | 0       | 0   | 0   |
+| 0   | 1   | 0       | 1   | 1   |
+| 1   | 0   | 0       | 1   | 1   |
+| 1   | 1   | 1       | 1   | 0   |
+
 ### Notes
 
-- Assignment operators are a shorthand way to modify variables and assign new values in a single step.
-- The right-hand operand can be a variable, constant, or expression.
+- **Bitwise AND (`&`)** sets a bit to `1` if both corresponding bits are `1`.
+- **Bitwise OR (`|`)** sets a bit to `1` if at least one corresponding bit is `1`.
+- **Bitwise XOR (`^`)** sets a bit to `1` if only one of the corresponding bits is `1`.
+- **Bitwise NOT (`~`)** inverts all bits.
+- **Left Shift (`<<`)** multiplies the number by powers of two.
+- **Right Shift (`>>`)** divides the number by powers of two (with integer division).
 
-This table summarizes the assignment operators and their usage in common programming scenarios.
+This table explains the bitwise operators and provides examples to clarify how they work in practice.
