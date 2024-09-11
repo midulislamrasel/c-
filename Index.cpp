@@ -66,12 +66,12 @@ cout << myNum;
 
 
 // Boolean
-// int main() {
-//   bool isCodingFun = true;
-//   cout << isCodingFun << "\n";
-//   bool isFishTasty = false;
-//   cout << isFishTasty;
-// }
+int main() {
+  bool isCodingFun = true;
+  cout << isCodingFun << "\n";
+  bool isFishTasty = false;
+  cout << isFishTasty;
+}
 
 
 
