@@ -66,18 +66,26 @@ cout << myNum;
 
 
 // Boolean
-int main() {
-  bool isCodingFun = true;
-  cout << isCodingFun << "\n";
-  bool isFishTasty = false;
-  cout << isFishTasty;
+// int main() {
+//   bool isCodingFun = true;
+//   cout << isCodingFun << "\n";
+//   bool isFishTasty = false;
+//   cout << isFishTasty;
+// }
+
+
+
+// int main () {
+//   char a = 65;
+//   cout << " Number" << a <<endl;
+//   cout << " Number" << (int)a ;
+// }
+
+
+int main(){
+    string greeting = " Hello Bangladesh";
+    cout << greeting;
 }
-
-
-
-
-
-
 
 
 
